@@ -52,6 +52,8 @@ import {
     NfRegistryUsersAdministrationAuthGuard,
     NfRegistryWorkflowsAdministrationAuthGuard
 } from 'services/nf-registry.auth-guard.service';
+import NfAboutComponent from 'components/about/nf-registry-about';
+import NfAboutDialogComponent from 'components/about/dialogs/nf-registry-about-dialog';
 
 function NfRegistryModule() {
 }
@@ -89,7 +91,9 @@ NfRegistryModule.annotations = [
             NfRegistryDropletGridListViewer,
             NfPageNotFoundComponent,
             NfLoginComponent,
-            NfUserLoginComponent
+            NfUserLoginComponent,
+            NfAboutComponent,
+            NfAboutDialogComponent
         ],
         entryComponents: [
             NfRegistryAddUser,
@@ -99,7 +103,9 @@ NfRegistryModule.annotations = [
             NfRegistryAddUsersToGroup,
             NfRegistryAddPolicyToBucket,
             NfRegistryEditBucketPolicy,
-            NfUserLoginComponent
+            NfUserLoginComponent,
+            NfAboutComponent,
+            NfAboutDialogComponent
         ],
         providers: [
             NfRegistryService,

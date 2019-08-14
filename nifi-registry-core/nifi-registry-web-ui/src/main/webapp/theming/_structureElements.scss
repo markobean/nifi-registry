@@ -30,6 +30,16 @@ body {
   bottom: 0;
 }
 
+#nifi-registry-about-perspective {
+    background: $grey12 url('/nifi-registry/assets/images/registry-logo-web-app.svg') no-repeat center center;
+    background-size: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 #nifi-registry-not-found-perspective {
   background: $grey12 url('/nifi-registry/assets/images/registry-logo-web-app.svg') no-repeat center center;
   background-size: 40%;

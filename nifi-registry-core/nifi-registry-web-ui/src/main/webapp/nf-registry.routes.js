@@ -34,6 +34,7 @@ import {
     NfRegistryUsersAdministrationAuthGuard,
     NfRegistryWorkflowsAdministrationAuthGuard
 } from 'services/nf-registry.auth-guard.service';
+import NfRegistryAbout from 'components/about/nf-registry-about';
 
 // eslint-disable-next-line new-cap
 const NfRegistryRoutes = new RouterModule.forRoot([{
@@ -60,6 +61,9 @@ const NfRegistryRoutes = new RouterModule.forRoot([{
             canActivate: [NfRegistryResourcesAuthGuard]
         }
     ]
+}, {
+    path: 'nifi-registry/about',
+    component: NfRegistryAbout
 }, {
     path: 'nifi-registry/login',
     component: NfLoginComponent,

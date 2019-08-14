@@ -22,6 +22,8 @@ import NfStorage from 'services/nf-storage.service';
 import nfRegistryAnimations from 'nf-registry.animations';
 import NfRegistryApi from 'services/nf-registry.api';
 import { Router } from '@angular/router';
+// import { MatDialog } from '@angular/material';
+// import NfRegistryAbout from './components/dialogs/about/nf-registry-about';
 
 /**
  * NfRegistry constructor.
@@ -41,6 +43,7 @@ function NfRegistry(http, nfStorage, nfRegistryService, nfRegistryApi, changeDet
     this.nfRegistryApi = nfRegistryApi;
     this.cd = changeDetectorRef;
     this.router = router;
+    // this.dialog = matDialog;
 }
 
 NfRegistry.prototype = {
@@ -82,6 +85,14 @@ NfRegistry.prototype = {
      */
     login: function () {
         this.router.navigateByUrl('/nifi-registry/login');
+    },
+
+    /**
+     * Display 'About' information including version
+     */
+    about: function () {
+        this.router.navigateByUrl('/nifi-registry/about');
+        // this.dialog.open(NfRegistryAbout);
     }
 };
 
@@ -103,6 +114,7 @@ NfRegistry.parameters = [
     NfRegistryApi,
     ChangeDetectorRef,
     Router
+    // MatDialog
 ];
 
 export default NfRegistry;
